@@ -1,11 +1,7 @@
-module Number exposing (getNumber)
+module Number exposing (..)
 
--- where
-
-import Native.Number
-import Task
+import Ffi
 
 
-getNumber : Int -> Task.Task x a
 getNumber number =
-    Native.Number.getNumber number
+    Ffi.promise "getNumber" 1
